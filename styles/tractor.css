@@ -1,0 +1,240 @@
+/* COMMON */
+
+.container {
+    position: relative;
+    width: 600px;
+    height: 600px;
+}
+
+.orig {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: .5;
+    z-index: 1000;
+}
+
+.picture {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* BASE */
+
+.base {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    bottom: 12.5%;
+    left: 50%;
+    transform: translateX(-62%);
+    width: 61%;
+    height: 14.5%;
+    background: linear-gradient(0deg, #AF8C6A 10%, #f6eee6 50%, #AF8C6A 90%);
+    z-index: 7;
+}
+
+.base .wheel {
+    position: relative;
+    z-index: 6;
+}
+
+.base .wheel.back {
+    width: 60%;
+    height: 256%;
+    transform: translate(-12%, -37%);
+    z-index: 5;
+}
+
+.base .wheel.front {
+    width: 37.5%;
+    height: 160%;
+    transform: translate(35%);
+}
+
+.base .wheel .wheel__tire {
+    width: 100%;
+    height: 100%;
+    background-color: #6c4d33;
+}
+
+.base .wheel .wheel__base {
+    width: 70%;
+    height: 70%;
+    background-color: #e8cea1;
+}
+
+.base .wheel .wheel__axis {
+    width: 15%;
+    height: 15%;
+    background-color: #c2332d;
+}
+
+/* BODY */
+
+.body {
+    position: absolute;
+    bottom: 27%;
+    left: 36.7%;
+    width: 41.5%;
+    height: 19%;
+    z-index: 5;
+}
+
+.body .lowerbody__container {
+    width: 100%;
+    height: 50%;
+    display: flex;
+}
+
+.body .lowerbody__container .nose {
+    border-style: solid;
+    border-color: transparent;
+    border-top-color: #67ad61;
+    border-left-color: #67ad61;
+}
+
+.body .lowerbody {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: #67ad61;
+}
+
+.body .upperbody__container {
+    width: 100%;
+    height: 50%;
+    display: flex;
+}
+
+.body .upperbody__container .nose {
+    border-style: solid;
+    border-color: transparent;
+    border-bottom-color: #97ce86;
+    border-left-color: #97ce86;
+}
+
+.body .upperbody {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background: #97ce86;
+}
+
+/* CABIN */
+
+.cabin {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    bottom: 35%;
+    left: 12.5%;
+    width: 36%;
+    height: 36%;
+    z-index: 3;
+}
+
+.roof__container {
+    display: flex;
+    width: 118%;
+    height: 20%;
+}
+
+.roof {
+    width: 100%;
+    height: 100%;
+    background-color: #e68c01;
+}
+
+.visor {
+    border-style: solid;
+    border-color: transparent;
+    border-top-color: #e68c01;
+    border-left-color: #e68c01;
+}
+
+.roof::after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: -40px;
+    top: 0;
+    border-left-color: #e68c01;
+    border-top-color: #e68c01;
+}
+
+.balk {
+    width: 12.5%;
+    height: 100%;
+    background-color: #faaa13;
+}
+
+.seat {
+    padding-right: 5%;
+    width: 100%;
+    height: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.chair {
+    width: 35%;
+    height: 52.5%;
+    border-bottom-left-radius: 70%;
+    border-bottom:  solid #d74225;
+    border-left:  solid #d74225;
+}
+
+/* EXHAUST */
+
+.exhaust {
+    position: absolute;
+    bottom: 46%;
+    left: 61%;
+    height: 25%;
+    width: 7.5%;
+    background: linear-gradient(to right, #e28e19 40%, #fff 70%, #e28e19 90%);
+}
+
+/* EMISSIONS */
+
+.emissions {
+    position: absolute;
+    bottom: 72.5%;
+    left: 62.5%;
+    height: 24.5%;
+    width: 24.5%;
+}
+
+.bubble {
+    position: absolute;
+    background: radial-gradient(#fff, #74b8dc 50%, #000 95%);
+}
+
+.bubble.upper {
+    top: 3%;
+    right: 18%;
+    width: 35%;
+    height: 35%;
+}
+
+.bubble.middle {
+    bottom: 42%;
+    left: 0;
+    width: 35%;
+    height: 35%;
+}
+
+.bubble.lower {
+    bottom: 0;
+    left: 0;
+    width: 30%;
+    height: 30%;
+}
+

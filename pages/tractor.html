@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../assets/icons/roflan.ico">
+    <link rel="stylesheet" href="../styles/common.css">
+    <link rel="stylesheet" href="../styles/tractor.css">
+    <title>Picture</title>
+</head>
+<body>
+    <header>
+        <a href="../index.html" class="logo">Верстка</a>
+        <nav>
+            <a href="./advertisement.html">Реклама</a>
+            <a href="./tractor.html" class="active">Трактор (крутой)</a>
+        </nav>
+    </header>
+
+    <div class="wrapper center__content">
+        <input type="range" min="0" max="100" value="50">
+        
+        <div class="container">
+            <div class="picture">
+
+                <div class="base">
+                    <div class="back wheel">
+                        <div class="wheel__tire center__content round">
+                            <div class="wheel__base center__content round">
+                                <div class="wheel__axis round"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="transmission"></div>
+
+                    <div class="front wheel">
+                        <div class="wheel__tire center__content round">
+                            <div class="wheel__base center__content round">
+                                <div class="wheel__axis round"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="body">
+                    <div class="upperbody__container">
+                        <div class="upperbody"></div>
+                        <div class="nose"></div>
+                    </div>
+
+                    <div class="lowerbody__container">
+                        <div class="lowerbody"></div>
+                        <div class="nose"></div>
+                    </div>
+                </div>
+
+                <div class="cabin">
+                    <div class="roof__container">
+                        <div class="roof"></div>
+                        <div class="visor"></div>
+                    </div>
+
+                    <div class="seat">
+                        <div class="balk back"></div>
+                        <div class="chair"></div>
+                        <div class="balk front"></div>
+                    </div>
+                </div>
+
+                <div class="exhaust"></div>
+
+                <div class="emissions">
+                    <div class="round bubble upper"></div>
+                    <div class="round bubble middle"></div>
+                    <div class="round bubble lower"></div>
+                </div>
+            </div>
+
+            <img src="../assets/img/tractor.png" alt="" class="orig">
+        </div>
+
+    </div>
+
+    <footer>
+        <p class="rights">@All rights reserved</p>
+        <p class="year">2022</p>
+    </footer>
+
+    <script>
+        const input = document.querySelector('input');
+        const orig = document.querySelector('.orig');
+
+        const addBorder = [
+            [document.querySelectorAll('.chair'), document.querySelector('.chair'), 40, 40],
+            [document.querySelectorAll('.upperbody__container .nose'), document.querySelector('.upperbody__container'), 6, 50],
+            [document.querySelectorAll('.lowerbody__container .nose'), document.querySelector('.lowerbody__container'), 6, 50],
+            [document.querySelectorAll('.roof__container .visor'), document.querySelector('.roof__container'), 8, 50],
+        ];
+
+        const addBorderInPercents = (elements, from, percentWidth, percentHeight) => {
+            elements.forEach(element => {
+                console.log(element);
+                const borderWidthInPx = `${from.clientWidth / 100 * percentWidth}px`;
+                const borderHeightInPx = `${from.clientHeight / 100 * percentHeight}px`;
+
+                element.style.borderTopWidth = borderHeightInPx;
+                element.style.borderRightWidth = borderWidthInPx;
+                element.style.borderBottomWidth = borderHeightInPx;
+                element.style.borderLeftWidth = borderWidthInPx;
+            });
+        }
+
+        addBorder.forEach(element => addBorderInPercents(...element))
+
+        input.addEventListener('input', (event) => {
+            const val = event.target.value;
+            orig.style.opacity = val / 100;
+        })
+    </script>
+</body>
+</html>

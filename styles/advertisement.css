@@ -1,0 +1,99 @@
+/* COMMON */
+
+.container {
+    position: relative;
+    width: 600px;
+    height: 600px;
+    background: url(../assets/img/adv_background.jpg);
+    background-size: contain;
+    background-position: 0 0;
+}
+
+/* POT */
+
+.container:hover .pot__container {
+    width: 50%;
+    height: 50%;
+    opacity: 1;
+    animation: biggify 1.3s 1.3s 1 ease-out alternate;
+}
+
+.container:active   {
+    animation: shake .5s infinite ease-in-out alternate;
+}
+
+.container:active .pot__container .lid {
+    opacity: 1;
+    animation: openLid .5s infinite ease-in-out alternate;
+}
+
+.pot__container {
+    position: absolute;
+    opacity: 0;
+    width: 0%;
+    height: 0%;
+    bottom: 35%;
+    left: 45%;
+    transform: translate(-50%, 50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 1.3s ease-in;
+}
+
+.lid {
+    width: 71%;
+    position: absolute;
+    transform: rotate(-35deg);
+    opacity: 0;
+    transition: all .2s linear;
+    z-index: 2;
+    transform-origin: 80% 65%;
+}
+
+.pot {
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+}
+
+/* ANIMATIONS */
+
+@keyframes biggify {
+    0% {
+        transform: translate(-50%, 50%) scale(1);
+    }
+    50% {
+        transform: translate(-50%, 50%) scale(1.5);
+    }
+    100% {
+        transform: translate(-50%, 50%) scale(1);
+    }
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(0%);
+    }
+    25% {
+        transform: translateX(-2%);
+    }
+    75% {
+        transform: translateX(2%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes openLid {
+    0% {
+        transform: rotate(-35deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-35deg);
+    }
+} 
