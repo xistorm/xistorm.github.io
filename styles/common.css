@@ -11,7 +11,6 @@
     padding: 0;
     font-family: 'Roboto Condensed', sans-serif;
     font-weight: var(--regular);
-    font-size: var(--small);
 }
 
 body {
@@ -81,6 +80,7 @@ header nav a:hover, header nav a.active {
 .logo {
     padding: .5rem;
     font-size: var(--big);
+    font-weight: var(--bold);
     border-radius: .5rem;
     color: var(--colorDarkMain);
     background-color: var(--colorWhite);
