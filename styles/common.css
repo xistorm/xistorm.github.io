@@ -1,27 +1,33 @@
-@import url('https://fonts.googleapis.com/css2?family=PT+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,700&display=swap');
+@import url('./variables/_colors.css');
+@import url('./variables/_text.css');
+
+:root {
+    --layout-height: 4.5rem;
+}
 
 *, html, body {
     margin: 0;
     padding: 0;
-    font-family: 'PT Mono', monospace;
-    font-size: 1rem;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: var(--regular);
+}
+
+body {
+    background: var(--colorWhite);
 }
 
 a {
-    color: #fff;
+    color: var(--colorWhite);
     transition: all .3s ease;
     text-decoration: none;
-}
-
-a:hover, a.active {
-    color: #42aaff;
 }
 
 .wrapper {
     box-sizing: border-box;
     padding: 2rem;
     min-width: 100%;
-    min-height: calc(100vh - 8rem);
+    min-height: calc(100vh - var(--layout-height) * 2);
     flex-direction: column;
 }
 
@@ -40,12 +46,12 @@ a:hover, a.active {
 /* LAYOUT */
 
 header, footer {
-    color: #fff;
+    color: var(--colorWhite);
     position: relative;
     box-sizing: border-box;
     width: 100%;
-    min-height: 4rem;
-    background-color: #333;
+    height: var(--layout-height);
+    background: var(--colorDarkMain);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -54,12 +60,28 @@ header, footer {
 
 header nav {
     display: flex;
+    height: 100%;
 }
 
 header nav a {
-    margin-left: 2rem;
+    box-sizing: border-box;
+    font-size: var(--medium);
+    padding: 0 2rem;
+    height: 100%;
+    line-height: var(--layout-height);
+    border-bottom: 0 solid var(--colorWhite);
+}
+
+header nav a:hover, header nav a.active {
+    border-bottom-width: .5rem;
+    color: var(--colorSecondary);
 }
 
 .logo {
-    font-size: 2rem;
+    padding: .5rem;
+    font-size: var(--big);
+    font-weight: var(--bold);
+    border-radius: .5rem;
+    color: var(--colorDarkMain);
+    background-color: var(--colorWhite);
 }

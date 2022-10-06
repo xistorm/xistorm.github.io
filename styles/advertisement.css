@@ -2,8 +2,8 @@
 
 .container {
     position: relative;
-    width: 600px;
-    height: 600px;
+    width: 200px;
+    height: 200px;
     background: url(../assets/img/adv_background.jpg);
     background-size: contain;
     background-position: 0 0;
