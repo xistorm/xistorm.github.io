@@ -3,14 +3,16 @@
 @import url('./variables/_text.css');
 
 :root {
-    --layout-height: 4.5rem;
+    --layout-height: 5rem;
 }
 
 *, html, body {
     margin: 0;
     padding: 0;
     font-family: 'Roboto Condensed', sans-serif;
+    font-size: var(--common-size);
     font-weight: var(--regular);
+    transition: all .3s ease;
 }
 
 body {
@@ -19,7 +21,6 @@ body {
 
 a {
     color: var(--colorWhite);
-    transition: all .3s ease;
     text-decoration: none;
 }
 
@@ -74,14 +75,22 @@ header nav a {
 
 header nav a:hover, header nav a.active {
     border-bottom-width: .5rem;
-    color: var(--colorSecondary);
+    background: var(--colorMain);
 }
 
 .logo {
-    padding: .5rem;
+    box-sizing: border-box;
+    padding: .5rem 1rem;
     font-size: var(--big);
     font-weight: var(--bold);
-    border-radius: .5rem;
+    border-radius: 1rem;
+    border: 3px solid var(--colorMain);
     color: var(--colorDarkMain);
     background-color: var(--colorWhite);
+}
+
+.logo:hover {
+    color: var(--colorWhite);
+    background-color: var(--colorMain);
+    border-color: var(--colorWhite);
 }
