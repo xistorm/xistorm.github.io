@@ -2,9 +2,9 @@
 
 .container {
     position: relative;
-    width: 200px;
-    height: 200px;
-    background: url(../assets/img/adv_background.jpg);
+    width: 600px;
+    height: 600px;
+    background: url(../assets/img/advertisement/adv_background.jpg);
     background-size: contain;
     background-position: 0 0;
 }
