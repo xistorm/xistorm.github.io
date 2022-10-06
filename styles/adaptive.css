@@ -1,0 +1,61 @@
+@import url('variables/_colors.css');
+@import url('variables/_sizes.css');
+
+@media screen and (max-width: 1450px) {
+    .wrapper {
+        margin-top: var(--layout-height);
+    }
+
+    header {
+        top: 0;
+        position: fixed;
+        z-index: 10000;
+    }
+
+    header .menu__btn {
+        display: block;
+    }
+
+    header nav {
+        position: fixed;
+        height: calc(100vh - var(--layout-height));
+        width: 50%;
+        top: var(--layout-height);
+        right: 0;
+        transform: translateX(100%);
+        flex-direction: column;
+        background: var(--colorDarkMain);
+        z-index: 10000;
+    }
+
+    header nav.active {
+        transform: translateX(0%);
+    }
+
+    header nav a {
+        background: var(--colorDarkMain);
+        border-left: 0 solid var(--colorWhite);
+    }
+
+    header nav a:hover, header nav a.active {
+        border-left-width: .5rem;
+        border-bottom-width: 0;
+        background: var(--colorMain);
+    }
+}
+
+@media screen and (max-width: 725px) {
+    header nav {
+        width: 100%;
+    }
+
+    header nav a {
+        background: var(--colorDarkMain);
+    }
+
+    header nav a:hover, header nav a.active {
+        border-left-width: 0;
+        border-bottom-width: 0;
+        background: var(--colorMain);
+    }
+}

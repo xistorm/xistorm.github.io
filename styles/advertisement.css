@@ -2,11 +2,11 @@
 
 .container {
     position: relative;
-    width: 600px;
-    height: 600px;
-    background: url(../assets/img/advertisement/adv_background.jpg);
+    width: min(600px, 80%);
+    height: min(600px, 80vh);
+    background: url(../assets/img/advertisement/adv_background.jpg) no-repeat;
     background-size: contain;
-    background-position: 0 0;
+    background-position: 50% 50%;
 }
 
 /* POT */
