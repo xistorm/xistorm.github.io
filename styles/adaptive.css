@@ -58,4 +58,13 @@
         border-bottom-width: 0;
         background: var(--colorMain);
     }
+
+    .cards {
+        width: 100%;
+        grid-template-columns: 1fr;
+    }
+
+    .card__content {
+        opacity: .8;
+    }
 }

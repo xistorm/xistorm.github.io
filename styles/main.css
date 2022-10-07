@@ -11,6 +11,14 @@
     color: var(--colorDarkMain);
     margin-top: 1rem;
     margin-bottom: 2rem;
+    border-bottom: 3px solid var(--colorDarkMain);
+}
+
+.info {
+    margin-bottom: 2rem;
+    font-size: var(--medium);
+    font-weight: var(--regular);
+    color: var(--colorDarkMain);
 }
 
 .cards {
