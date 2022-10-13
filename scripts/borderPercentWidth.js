@@ -1,19 +1,17 @@
-const addBorder = [
-    [document.querySelectorAll('.chair'), document.querySelector('.chair'), 40, 40],
-    [document.querySelectorAll('.upperbody__container .nose'), document.querySelector('.upperbody__container'), 6, 50],
-    [document.querySelectorAll('.lowerbody__container .nose'), document.querySelector('.lowerbody__container'), 6, 50],
-    [document.querySelectorAll('.roof__container .visor'), document.querySelector('.roof__container'), 8, 50],
-];
-
-const addBorderInPercents = (elements, from, percentWidth, percentHeight) => {
+const addBorderInPercents = (
+    elements,
+    from,
+    percentRight,
+    percentBottom = percentRight,
+    percentLeft = percentRight,
+    percentTop = percentBottom,
+) => {
     elements.forEach(element => {
-        const borderWidthInPx = `${from.clientWidth / 100 * percentWidth}px`;
-        const borderHeightInPx = `${from.clientHeight / 100 * percentHeight}px`;
-
-        element.style.borderTopWidth = borderHeightInPx;
-        element.style.borderRightWidth = borderWidthInPx;
-        element.style.borderBottomWidth = borderHeightInPx;
-        element.style.borderLeftWidth = borderWidthInPx;
+        console.log(element)
+        element.style.borderRightWidth = `${from.clientWidth / 100 * percentRight}px`;
+        element.style.borderBottomWidth = `${from.clientHeight / 100 * percentBottom}px`;
+        element.style.borderLeftWidth = `${from.clientWidth / 100 * percentLeft}px`;
+        element.style.borderTopWidth = `${from.clientHeight / 100 * percentTop}px`;
     });
 }
 
