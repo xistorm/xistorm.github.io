@@ -7,7 +7,7 @@ const addBorderInPercents = (
     percentTop = percentBottom,
 ) => {
     elements.forEach(element => {
-        console.log(element)
+        console.log(percentRight, from);
         element.style.borderRightWidth = `${from.clientWidth / 100 * percentRight}px`;
         element.style.borderBottomWidth = `${from.clientHeight / 100 * percentBottom}px`;
         element.style.borderLeftWidth = `${from.clientWidth / 100 * percentLeft}px`;
