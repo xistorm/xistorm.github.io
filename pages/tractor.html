@@ -66,7 +66,7 @@
         <input type="range" min="0" max="100" value="50">
         
         <div class="container">
-            <div class="picture">
+            <div class="picture tractor">
 
                 <div class="base">
                     <div class="back wheel">
@@ -133,11 +133,12 @@
     </footer>
 
     <script>
+        const tractor = document.querySelector('.tractor');
         let addBorder = [
-            [document.querySelectorAll('.chair'), document.querySelector('.chair'), 40, 40],
-            [document.querySelectorAll('.upperbody__container .nose'), document.querySelector('.upperbody__container'), 6, 50],
-            [document.querySelectorAll('.lowerbody__container .nose'), document.querySelector('.lowerbody__container'), 6, 50],
-            [document.querySelectorAll('.roof__container .visor'), document.querySelector('.roof__container'), 8, 50],
+            [tractor.querySelectorAll('.chair'), tractor.querySelector('.chair'), 40, 40],
+            [tractor.querySelectorAll('.upperbody__container .nose'), tractor.querySelector('.upperbody__container'), 6, 50],
+            [tractor.querySelectorAll('.lowerbody__container .nose'), tractor.querySelector('.lowerbody__container'), 6, 50],
+            [tractor.querySelectorAll('.roof__container .visor'), tractor.querySelector('.roof__container'), 8, 50],
         ];
     </script>
     <script src="../scripts/bordersOfLogo.js"></script>
