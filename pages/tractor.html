@@ -7,16 +7,57 @@
     <link rel="icon" type="image/x-icon" href="../assets/icons/roflan.ico">
     <link rel="stylesheet" href="../styles/common.css">
     <link rel="stylesheet" href="../styles/tractor.css">
+    <link rel="stylesheet" href="../styles/roflan.css">
     <link rel="stylesheet" href="../styles/adaptive.css">
     <title>Трактор (крутой)</title>
 </head>
 <body>
     <header>
-        <a href="../index.html" class="logo">Верстка</a>
+        <div class="logo">
+            <div class="logo__picture">
+                <div class="face">
+                    <div class="smile">
+                        <div class="smile__bottom"></div>
+                        <div class="smile__top"></div>
+                    </div>
+
+                    <div class="nose">
+                        <div class="nostrils"></div>
+                    </div>
+
+                    <div class="eyebrows">
+                        <div class="eyebrow right"></div>
+                        <div class="eyebrow left"></div>
+                    </div>
+
+                    <div class="eyes">
+                        <div class="eye right">
+                            <div class="eye__dot"></div>
+                        </div>
+                        <div class="eye left">
+                            <div class="eye__dot"></div>
+                        </div>
+                    </div>
+
+                    <div class="eyebags">
+                        <div class="eyebags__right">
+                            <div class="top"></div>
+                            <div class="bottom"></div>
+                        </div>
+                        <div class="eyebags__left">
+                            <div class="top"></div>
+                            <div class="bottom"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="../index.html" class="logo__href">Верстка</a>
+        </div>
         <nav>
             <a href="../index.html">Главная</a>
             <a href="./advertisement.html">Реклама</a>
             <a href="./tractor.html" class="active">Трактор (крутой)</a>
+            <a href="./roflan.html">Лого</a>
         </nav>
         <div class="menu__btn">Меню</div>
     </header>
@@ -25,7 +66,7 @@
         <input type="range" min="0" max="100" value="50">
         
         <div class="container">
-            <div class="picture">
+            <div class="picture tractor">
 
                 <div class="base">
                     <div class="back wheel">
@@ -91,6 +132,16 @@
         <p class="year">2022</p>
     </footer>
 
+    <script>
+        const tractor = document.querySelector('.tractor');
+        let addBorder = [
+            [tractor.querySelectorAll('.chair'), tractor.querySelector('.chair'), 40, 40],
+            [tractor.querySelectorAll('.upperbody__container .nose'), tractor.querySelector('.upperbody__container'), 6, 50],
+            [tractor.querySelectorAll('.lowerbody__container .nose'), tractor.querySelector('.lowerbody__container'), 6, 50],
+            [tractor.querySelectorAll('.roof__container .visor'), tractor.querySelector('.roof__container'), 8, 50],
+        ];
+    </script>
+    <script src="../scripts/bordersOfLogo.js"></script>
     <script src="../scripts/toggleMenu.js"></script>
     <script src="../scripts/borderPercentWidth.js"></script>
     <script src="../scripts/imageOpacityByInput.js"></script>

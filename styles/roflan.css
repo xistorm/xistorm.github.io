@@ -1,0 +1,258 @@
+/* COMMON */
+
+.container {
+    position: relative;
+    width: min(600px, 80%);
+    height: min(600px, 80vh);
+}
+
+.picture {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: none;
+}
+
+/* ROFLAN */
+
+.face {
+    box-sizing: border-box;
+    position: relative;
+    width: 82.5%;
+    height: 100%;
+    background: #FFD200;
+    border-color: #1C0300;
+    border-style: solid;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 60%;
+    border-bottom-right-radius: 60%;
+    border-bottom-left-radius: 60%;
+}
+
+/* SMILE */
+
+.smile {
+    position: absolute;
+    bottom: 10%;
+    left: 15%;
+    width: 82.5%;
+    height: 35%;
+    border-color: #1C0300;
+    border-style: solid;
+    transform: rotate(-18deg) ;
+    overflow: hidden;
+}
+
+.smile__top {
+    position: absolute;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-50%);
+    background: #fff;
+    border-color: #1C0300;
+    border-style: solid;
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 40%;
+    z-index: 2;
+}
+
+.smile__bottom {
+    position: absolute;
+    box-sizing: border-box;
+    width: 100%;
+    height: 200%;
+    transform: translateY(-50%);
+    background: #fff;
+    border-color: #1C0300;
+    border-style: solid;
+    border-bottom-right-radius: 85%;
+    border-bottom-left-radius: 60%;
+    z-index: 1;
+}
+
+/* NOSE */
+
+.face .nose {
+    position: absolute;
+    width: 10%;
+    height: 21.5%;
+    top: 22.5%;
+    left: 22.5%;
+    border-color: #1C0300;
+    border-style: solid;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    transform: skewX(30deg);
+    z-index: 3;
+}
+
+.nostrils {
+    position: absolute;
+    width: 100%;
+    height: 20%;
+    left: calc(100% - 10px);
+    bottom: 5%;
+    border-bottom-right-radius: 50%;
+    border-color:#1C0300;
+    border-style: solid;
+    transform: rotate(-10deg);
+}
+
+/* EYES */
+
+.eyes, .eyebrows {
+    position: absolute;
+    width: 90%;
+    height: 22.5%;
+    top: 12.5%;
+    transform: rotate(-23.5deg);
+    z-index: 2;
+}
+
+.eye {
+    box-sizing: border-box;
+    position: absolute;
+    border-top-right-radius: 100%;
+    border-bottom-left-radius: 100%;
+    background: #fff;
+    border-color:#1C0300;
+    border-style: solid;
+}
+
+.eye.left {
+    width: 27.5%;
+    height: 75%;
+    top: 15%;
+    left: 6%;
+    border-top-left-radius: 70%;
+    border-bottom-right-radius: 60%;
+}
+
+.eye.right {
+    width: 30%;
+    height: 95%;
+    top: 2.5%;
+    right: 17.5%;
+    border-top-left-radius: 80%;
+    border-bottom-right-radius: 70%;
+}
+
+.eye__dot {
+    position: absolute;
+    width: 25%;
+    height: 25%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background-color: #1C0300;
+}
+
+/* EYEBROWS */
+
+.eyebrow {
+    position: absolute;
+    background: #1C0300;
+    border-color: #1C0300;
+    border-style: solid;
+}
+
+.eyebrow.left {
+    width: 17.5%;
+    height: 0;
+    top: -17.5%;
+    left: 10%;
+    border-top-left-radius: 100%;
+    border-bottom-right-radius: 50%;
+    transform: rotate(-18deg);
+}
+
+.eyebrow.right {
+    width: 30%;
+    height: 0;
+    top: -12.5%;
+    right: 15%;
+    border-top-left-radius: 100%;
+    border-top-right-radius: 200%;
+    transform: rotate(18deg);
+}
+
+/* EYEBAGS */
+
+.eyebags {
+    position: absolute;
+    width: 70%;
+    height: 15%;
+    top: 35%;
+    left: 7.5%;
+    transform: rotate(-20deg);
+}
+
+.eyebags__right {
+    position: absolute;
+    height: 55%;
+    width: 25%;
+    left: 5%;
+}
+
+.eyebags__right .top {
+    position: absolute;
+    width: 80%;
+    height: 0;
+    right: 0;
+    top: 15%;
+    border-color: #1C0300;
+    border-style: solid;
+    border-bottom-left-radius: 60%;
+    border-bottom-right-radius: 100%;
+    transform: rotate(10deg);
+}
+
+.eyebags__right .bottom {
+    position: absolute;
+    width: 80%;
+    height: 50%;
+    left: 0;
+    bottom: 0;
+    border-color: #1C0300;
+    border-style: solid;
+    border-bottom-left-radius: 100%;
+    border-bottom-right-radius: 100%;
+    transform: rotate(10deg) skewX(50deg);
+}
+
+.eyebags__left {
+    position: absolute;
+    height: 100%;
+    width: 30%;
+    right: 0;
+}
+
+.eyebags__left .top {
+    position: absolute;
+    width: 70%;
+    height: 60%;
+    right: 10%;
+    top: -20%;
+    border-color: #1C0300;
+    border-style: solid;
+    border-bottom-right-radius: 50%;
+    transform: rotate(45deg) skewX(-15deg);
+}
+
+.eyebags__left .bottom {
+    position: absolute;
+    width: 50%;
+    height: 20%;
+    left: 20%;
+    bottom: 10%;
+    border-color: #1C0300;
+    border-style: solid;
+    border-bottom-left-radius: 30%;
+    border-bottom-right-radius: 50%;
+    transform: rotate(10deg) skewX(50deg);
+}
