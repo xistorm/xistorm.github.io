@@ -12,6 +12,14 @@
     font-weight: var(--regular);
 }
 
+button {
+    cursor: pointer;
+}
+
+ul, ol {
+    list-style: none;
+}
+
 body {
     background: var(--colorWhite);
 }

@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="../assets/icons/roflan.ico">
     <link rel="stylesheet" href="../styles/common.css">
+    <link rel="stylesheet" href="../styles/phrases.css">
     <link rel="stylesheet" href="../styles/roflan.css">
-    <link rel="stylesheet" href="../styles/advertisement.css">
     <link rel="stylesheet" href="../styles/adaptive.css">
-    <title>Реклама</title>
+    <title>Фразочки</title>
 </head>
 <body>
     <header>
@@ -55,21 +55,28 @@
         </div>
         <nav>
             <a href="../index.html">Главная</a>
-            <a href="./advertisement.html" class="active">Реклама</a>
+            <a href="./advertisement.html">Реклама</a>
             <a href="./tractor.html">Трактор (крутой)</a>
             <a href="./roflan.html">Лого</a>
-            <a href="./phrases.html">Фразочки</a>
+            <a href="./phrases.html" class="active">Фразочки</a>
         </nav>
         <div class="menu__btn">Меню</div>
     </header>
 
     <div class="wrapper center__content">
-       
-        <div class="container">
-            <div class="pot__container">
-                <img class="lid" src="../assets/img/advertisement/adv_lid.png">
-                <img class="pot" src="../assets/img/advertisement/adv_pot.png">
+        
+        <div class="phrases">
+            
+            <div class="phrases__container">
+                <ul class="unselected"></ul>
+                <ul class="temp"></ul>
+                <ul class="selected"></ul>
             </div>
+            <div class="phrases__controls">
+                <button class="phrases__control add">Добавить фразу</button>
+                <button class="phrases__control clear">Удалить все</button>
+            </div>
+
         </div>
 
     </div>
@@ -79,6 +86,7 @@
         <p class="year">2022</p>
     </footer>
 
+    <script src="../scripts/phrases.js"></script>
     <script src="../scripts/bordersOfLogo.js"></script>
     <script src="../scripts/toggleMenu.js"></script>
     <script src="../scripts/borderPercentWidth.js"></script>

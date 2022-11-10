@@ -42,6 +42,15 @@
         border-bottom-width: 0;
         background: var(--colorMain);
     }
+
+    .phrases__controls {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .phrase__control {
+        width: 75%;
+    }
 }
 
 @media screen and (max-width: 725px) {
@@ -66,5 +75,9 @@
 
     .card__content {
         opacity: .8;
+    }
+
+    .phrase__control {
+        width: 75%;
     }
 }
