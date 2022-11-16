@@ -3,7 +3,7 @@
 
 .phrases {
     position: relative;
-    width: 30%;
+    width: 40%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -64,7 +64,7 @@
     transition: all .2s ease;
 }
 
-.selected .phrase, .temp .phrase, .clear {
+.selected .phrase, .temp .phrase, .clear, .recolor {
     border-color: var(--colorDarkMain);
 }
 
@@ -72,7 +72,7 @@
     transform: scale(1.1);
 }
 
-.selected .phrase, .temp .phrase, .clear, .unselected .phrase:hover, .add:hover {
+.selected .phrase, .temp .phrase, .clear, .recolor, .unselected .phrase:hover, .add:hover {
     background: var(--colorDarkMain);
 }
 
@@ -80,7 +80,7 @@
     border-color: var(--colorMain);
 }
 
-.unselected .phrase, .add, .selected .phrase:hover, .clear:hover {
+.unselected .phrase, .add, .selected .phrase:hover, .clear:hover, .recolor:hover {
     background: var(--colorMain);
 }
 

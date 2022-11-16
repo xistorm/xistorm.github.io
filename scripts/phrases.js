@@ -17,6 +17,7 @@ const unselectedPhrases = phrasesContainer.querySelector('.unselected');
 
 const addControl = controlsContainer.querySelector('.add');
 const clearControl = controlsContainer.querySelector('.clear');
+const changeColor = controlsContainer.querySelector('.recolor');
 
 
 const getElementOffsetY = (parent, element) => {
@@ -46,6 +47,22 @@ const add = () => {
     setTimeout(() => li.classList.remove('appear'), 1000);
 
     return li;
+}
+
+const randomizeColor = () => {
+    const backgroundColor = ((1<<24)*Math.random() | 0);
+    const textColor = (1<<24) - backgroundColor;
+
+    return [textColor.toString(16), backgroundColor.toString(16)];
+}
+
+const recolor = () => {
+    const selected = selectedPhrases.querySelectorAll('.phrase');
+    const [textColor, backgroundColor] = randomizeColor();
+    selected.forEach(phrase => {
+        phrase.style.background = `#${backgroundColor}`;
+        phrase.style.color = `#${textColor}`;
+    });
 }
 
 const clear = () => {
@@ -126,5 +143,5 @@ const unselect = (event) => {
 }
 
 addControl.addEventListener('click', add);
-
-clearControl.addEventListener('click', clear)
+changeColor.addEventListener('click', recolor);
+clearControl.addEventListener('click', clear);
